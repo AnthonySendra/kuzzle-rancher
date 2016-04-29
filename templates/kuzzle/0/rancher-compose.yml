@@ -5,7 +5,7 @@ Redis:
 Elasticsearch:
   scale: 2
 
-.catalog
+.catalog:
   name: "Kuzzle failover"
   version: "v1.0.0"
   description: "Kuzzle"
