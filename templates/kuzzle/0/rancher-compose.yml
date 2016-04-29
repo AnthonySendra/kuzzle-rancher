@@ -11,15 +11,15 @@ Elasticsearch:
   uuid: kuzzle-0
   description: "Kuzzle"
   questions:
-  	- variable: "http_port"
-  	  description: "Http port"
-   	  label: "Http port"
-   	  required: true
-   	  default: "7511"
-   	  type: "int"
-	- variable: "ws_port"
-  	  description: "Websocket port"
-   	  label: "Websocket port"
-   	  required: true
-   	  default: "7512"
-   	  type: "int"
+    - variable: "http_port"
+      description: "Http port"
+      label: "Http port"
+      required: true
+      default: "7511"
+      type: "int"
+    - variable: "ws_port"
+      description: "Websocket port"
+      label: "Websocket port"
+      required: true
+      default: "7512"
+      type: "int"
