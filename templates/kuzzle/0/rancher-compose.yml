@@ -1,0 +1,25 @@
+Kuzzle:
+  scale: 2
+Redis:
+  scale: 4
+Elasticsearch:
+  scale: 2
+
+.catalog
+  name: Kuzzle failover
+  version: "v1.0.0-kuzzle"
+  uuid: kuzzle-0
+  description: "Kuzzle"
+  questions:
+  	- variable: "http_port"
+  	  description: "Http port"
+   	  label: "Http port"
+   	  required: true
+   	  default: "7511"
+   	  type: "int"
+	- variable: "ws_port"
+  	  description: "Websocket port"
+   	  label: "Websocket port"
+   	  required: true
+   	  default: "7512"
+   	  type: "int"

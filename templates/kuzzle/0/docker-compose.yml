@@ -1,0 +1,30 @@
+Kuzzle:
+  ports:
+  - ${http_port}:7511/tcp
+  - ${ws_port}:7512/tcp
+  log_driver: ''
+  labels:
+    io.rancher.container.pull_image: always
+  tty: true
+  log_opt: {}
+  image: kuzzleio/kuzzle
+  links:
+  - Redis:redis
+  - Elasticsearch:elasticsearch
+  stdin_open: true
+Redis:
+  log_driver: ''
+  labels:
+    io.rancher.container.pull_image: always
+  tty: true
+  log_opt: {}
+  image: kuzzleio/redis
+  stdin_open: true
+Elasticsearch:
+  log_driver: ''
+  labels:
+    io.rancher.container.pull_image: always
+  tty: true
+  log_opt: {}
+  image: kuzzleio/elasticsearch:2.3
+  stdin_open: true
