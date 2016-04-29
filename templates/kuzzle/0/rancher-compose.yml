@@ -6,9 +6,8 @@ Elasticsearch:
   scale: 2
 
 .catalog
-  name: Kuzzle failover
-  version: "v1.0.0-kuzzle"
-  uuid: kuzzle-0
+  name: "Kuzzle failover"
+  version: "v1.0.0"
   description: "Kuzzle"
   questions:
     - variable: "http_port"
