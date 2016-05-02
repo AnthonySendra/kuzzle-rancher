@@ -1,9 +1,11 @@
 Kuzzle:
-  scale: 2
+  scale: 1
 Redis:
-  scale: 4
+  scale: 1
 Elasticsearch:
-  scale: 2
+  scale: 1
+KuzzleBo:
+  scale: 1
 
 .catalog:
   name: "Kuzzle failover"
@@ -21,4 +23,10 @@ Elasticsearch:
       label: "Websocket port"
       required: true
       default: "7512"
+      type: "int"
+    - variable: "bo_http_port"
+      description: "Back Office Http port"
+      label: "Http port"
+      required: true
+      default: "3000"
       type: "int"
