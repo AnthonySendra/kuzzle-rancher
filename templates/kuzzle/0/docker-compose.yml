@@ -29,6 +29,8 @@ Elasticsearch:
   image: kuzzleio/elasticsearch:2.3
   stdin_open: true
 Kibana:
+  ports:
+  - ${kibana_port}:5601/tcp
   log_driver: ''
   labels:
     io.rancher.container.pull_image: always
