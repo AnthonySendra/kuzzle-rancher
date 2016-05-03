@@ -28,6 +28,16 @@ Elasticsearch:
   log_opt: {}
   image: kuzzleio/elasticsearch:2.3
   stdin_open: true
+Kibana:
+  log_driver: ''
+  labels:
+    io.rancher.container.pull_image: always
+  tty: true
+  log_opt: {}
+  image: kuzzleio/kibana:4.5
+  links:
+  - Elasticsearch:elasticsearch
+  stdin_open: true
 KuzzleBo:
   ports:
   - ${bo_http_port}:3000/tcp
