@@ -13,8 +13,8 @@ KuzzleBo:
   description: "Kuzzle"
   questions:
     - variable: "http_port"
-      description: "Http port"
-      label: "Http port"
+      description: "HTTP port"
+      label: "HTTP port"
       required: true
       default: "7511"
       type: "int"
@@ -25,8 +25,14 @@ KuzzleBo:
       default: "7512"
       type: "int"
     - variable: "bo_http_port"
-      description: "Back Office Http port"
-      label: "Http port"
+      description: "Back Office HTTP port"
+      label: "HTTP port"
+      required: true
+      default: "3000"
+      type: "int"
+    - variable: "kibana_port"
+      description: "Kibana HTTP port"
+      label: "Kibana HTTP port"
       required: true
       default: "3000"
       type: "int"
