@@ -1,5 +1,7 @@
 name: Kuzzle
 description: |
- Kuzzle
+ For UI and linked objects developers, Kuzzle is an open-source solution that handles all the data management (CRUD, real-time storage, search, high-level features, etc).
+ Kuzzle features are accessible through a secured API. It can be used through a large choice of protocols such as REST, Websocket or Message Queuing protocols.
+ Kuzzle uses Elasticsearch filter DSL (see filters syntax for more details) as filtering language, and Redis to manage filters cache.
 version: v1.0.0
 category: Backend
