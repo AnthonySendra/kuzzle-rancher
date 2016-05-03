@@ -30,5 +30,5 @@ KuzzleBo:
     - variable: "kibana_port"
       label: "Kibana HTTP port"
       required: true
-      default: "3000"
+      default: "5601"
       type: "int"
