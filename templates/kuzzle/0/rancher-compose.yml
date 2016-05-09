@@ -12,12 +12,12 @@ KuzzleBo:
   version: "v1.0.0"
   description: "Kuzzle"
   questions:
-    - variable: "http_port"
+    - variable: "kuzzle_http_port"
       label: "Kuzzle HTTP port"
       required: true
       default: "7511"
       type: "int"
-    - variable: "ws_port"
+    - variable: "kuzzle_ws_port"
       label: "Kuzzle Websocket port"
       required: true
       default: "7512"
@@ -32,3 +32,7 @@ KuzzleBo:
       required: true
       default: "5601"
       type: "int"
+    - variable: "kuzzle_url"
+      label: "Kuzzle URL for Back Office"
+      required: true
+      type: "string"

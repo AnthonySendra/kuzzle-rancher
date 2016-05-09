@@ -1,10 +1,11 @@
 Kuzzle:
   ports:
-  - ${http_port}:7511/tcp
-  - ${ws_port}:7512/tcp
+  - ${kuzzle_http_port}:7511/tcp
+  - ${kuzzle_ws_port}:7512/tcp
   log_driver: ''
   labels:
     io.rancher.container.pull_image: always
+    io.rancher.scheduler.affinity:host_label: "tier=front"
   tty: true
   log_opt: {}
   image: kuzzleio/kuzzle
@@ -46,9 +47,12 @@ KuzzleBo:
   log_driver: ''
   labels:
     io.rancher.container.pull_image: always
+    io.rancher.scheduler.affinity:host_label: "tier=front"
   tty: true
   log_opt: {}
   image: kuzzleio/bo
   links:
   - Kuzzle:kuzzle
   stdin_open: true
+  environment:
+  - KUZZLE_URL="${kuzzle_url}:${kuzzle_ws_port}"
